@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "outDir": "templates",
+    "baseUrl": "./",
+    "declaration": true,
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "jsx": "react"
+  }
+}

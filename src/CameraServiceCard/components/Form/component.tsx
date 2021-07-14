@@ -18,7 +18,7 @@ import ReactHookFormSelect from '../../../shared/components/ReactHookFormSelect/
 import {ICameraServiceFormProps} from './types/ICameraServiceFormProps';
 
 
-export function CameraServiceForm(
+export default function CameraServiceForm(
     {form, loading, onSubmit}: ICameraServiceFormProps
 ): JSX.Element {
 

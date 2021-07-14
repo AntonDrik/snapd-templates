@@ -5,7 +5,7 @@ import {ServiceCardHeader} from '../shared/components/ServiceCard/components/Hea
 import {ICameraServiceCardTemplateProps} from './types/ITemplateProps';
 import RefreshIcon from '@material-ui/icons/Refresh';
 import {CircularIconButton} from '../shared/components/CircularIconButton/component';
-import {CameraServiceForm} from './components/Form/component';
+import CameraServiceForm from './components/Form/component';
 
 
 export function CameraServiceCardTemplate(

@@ -1,5 +1,5 @@
 {
-  "include": ["src/CameraServiceCard/index.tsx"],
+  "include": ["src"],
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "dist",

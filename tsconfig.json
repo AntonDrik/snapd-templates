@@ -1,16 +1,16 @@
 {
+  "include": ["src/CameraServiceCard/index.tsx"],
   "compilerOptions": {
-    "outDir": "",
     "baseUrl": "./",
-    "declaration": true,
-    "declarationMap": false,
-    "module": "ESNext",
-    "target": "ESNext",
-    "moduleResolution": "Node",
-    "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
-    "sourceMap": true,
+    "outFile": "dist/index.js",
+    "module": "AMD",
+    "target": "es5",
+    "moduleResolution": "node",
+    "allowJs": true,
     "skipLibCheck": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "jsx": "react"
   }
 }

@@ -2,7 +2,7 @@
   "include": ["src/CameraServiceCard/index.tsx"],
   "compilerOptions": {
     "baseUrl": "./",
-    "outFile": "dist/index.js",
+    "outDir": "dist",
     "module": "AMD",
     "target": "es5",
     "moduleResolution": "node",

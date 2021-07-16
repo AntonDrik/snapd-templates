@@ -10,9 +10,9 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "./dist"),
         filename: "[name]/index.js",
-        // libraryTarget: 'amd',
-        // library: 'SnapdTemplates',
-        // umdNamedDefine: true
+        libraryTarget: 'amd',
+        library: 'SnapdTemplates',
+        umdNamedDefine: true
     },
     resolve: {
         extensions: [".tsx", ".ts", ".js", ".json"]

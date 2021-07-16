@@ -3,7 +3,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "dist",
-    "module": "ES2020",
+    "module": "AMD",
     "target": "es5",
     "moduleResolution": "node",
     "allowJs": true,

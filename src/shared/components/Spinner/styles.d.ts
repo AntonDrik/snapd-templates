@@ -1,2 +1,2 @@
-declare const _default: (props?: any) => import("@material-ui/core/styles/withStyles").ClassNameMap<"container">;
+declare const _default: (props?: any) => import("@material-ui/styles").ClassNameMap<"container">;
 export default _default;

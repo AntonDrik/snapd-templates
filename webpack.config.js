@@ -1,8 +1,6 @@
 const path = require("path");
 const {ProgressPlugin, WatchIgnorePlugin} = require("webpack");
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
-const {TsconfigPathsPlugin} = require('tsconfig-paths-webpack-plugin');
-const DeclarationBundlerPlugin = require('./fixed-declaration-bundler-webpack-plugin');
 
 module.exports = {
     mode: "production",
@@ -12,31 +10,19 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "./dist"),
         filename: "[name]/index.js",
-        libraryTarget: 'umd',
-        library: 'MyLib',
-        umdNamedDefine: true
+        // libraryTarget: 'amd',
+        // library: 'SnapdTemplates',
+        // umdNamedDefine: true
     },
     resolve: {
-        extensions: [".tsx", ".ts", ".js", ".json"],
-        plugins: [
-            new TsconfigPathsPlugin({
-                configFile: path.resolve(__dirname, './tsconfig.json')
-            })
-        ]
+        extensions: [".tsx", ".ts", ".js", ".json"]
     },
     module: {
         rules: [
             {
-                test: /\.(ts|tsx)$/,
+                test: /\.(ts|js)x?$/,
                 exclude: /node_modules/,
-                use: [
-                    {
-                        loader: "ts-loader",
-                        options: {
-                            // transpileOnly: false
-                        }
-                    }
-                ]
+                loader: 'babel-loader'
             }
         ]
     },
@@ -46,10 +32,6 @@ module.exports = {
     plugins: [
         new WatchIgnorePlugin([/\.js$/, /\.d\.ts$/]),
         new CleanWebpackPlugin(),
-        new ProgressPlugin(),
-        // new DeclarationBundlerPlugin({
-        //     moduleName:'module',
-        //     out:'index.d.ts',
-        // })
+        new ProgressPlugin()
     ]
 };

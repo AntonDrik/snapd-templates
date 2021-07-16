@@ -14,6 +14,10 @@ export function CameraFormLimitInput(): JSX.Element {
     const capturingMode = useWatch({control, name: 'capturingMode'});
     const limitCameraMode = useWatch({control, name: 'limitCameraMode'});
 
+    const disabled = useMemo(() => {
+        return capturingMode === 'video'
+    }, [capturingMode]);
+
     return <>
         <Box display="flex" flexDirection="row">
 
@@ -24,7 +28,7 @@ export function CameraFormLimitInput(): JSX.Element {
                         name={'limitCameraMode'}
                         control={control}
                         render={({field: {value, onChange}}) => (
-                            <Switch disabled={capturingMode === 'video'} checked={value} onChange={onChange}/>
+                            <Switch disabled={disabled} checked={value} onChange={onChange}/>
                         )}
                     />
                 }
@@ -38,7 +42,7 @@ export function CameraFormLimitInput(): JSX.Element {
                     <Select
                         value={value}
                         onChange={onChange}
-                        disabled={!limitCameraMode || capturingMode === 'video'}
+                        disabled={!limitCameraMode || disabled}
                     >
                         {
                             Array.from({length: 10}).map((item, index) => {

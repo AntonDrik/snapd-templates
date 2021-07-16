@@ -11,6 +11,10 @@ export function FirstPhotoDelayInput(): JSX.Element {
     const {control} = useFormContext<ICameraConfig>();
     const capturingMode = useWatch({control, name: 'capturingMode'});
 
+    const disabled = useMemo(() => {
+        return capturingMode === 'video'
+    }, [capturingMode]);
+
     return <>
         <Controller
             name={'firstPhotoDelayMs'}
@@ -23,7 +27,7 @@ export function FirstPhotoDelayInput(): JSX.Element {
                 <CustomTooltip definition={CameraOptionsDefinition.DELAY.FIRST_PHOTO}>
                     <TextField
                         style={{width: 150}}
-                        disabled={capturingMode === 'video'}
+                        disabled={disabled}
                         value={value ?? ''}
                         onChange={onChange}
                         type="number"

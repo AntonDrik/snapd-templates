@@ -16,7 +16,7 @@
     "url": "https://github.com/AntonDrik/snapd-templates/issues"
   },
   "files": [
-    "dist/**/index.*"
+    "dist"
   ],
   "homepage": "https://github.com/AntonDrik/snapd-templates#readme",
   "peerDependencies": {

@@ -18,6 +18,7 @@
   "files": [
     "dist"
   ],
+  "types": "dist/index.d.ts",
   "homepage": "https://github.com/AntonDrik/snapd-templates#readme",
   "peerDependencies": {
     "react": "^16.13.1",

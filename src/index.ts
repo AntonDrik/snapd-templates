@@ -1,3 +1,2 @@
-import {CameraServiceCardTemplate} from './CameraServiceCard';
-
-export {CameraServiceCardTemplate};
+export * from './CameraServiceCard';
+export * from './shared/types';
